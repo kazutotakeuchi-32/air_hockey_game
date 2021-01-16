@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * { padding: 0; margin: 0; }
+      body{
+        background-color: #111111;
+      }
+    	canvas {
+          background-color: black;
+         display: block;
+          margin: 0 auto;
+          }
+      h1{
+        text-align: center;
+        color: #333333;
+      }
+      .filed{
+        text-align: center;
+        margin: auto;
+        font-size: 30px;
+        color: #333333;
+      }
+  </style>
+
+  <title>Document</title>
+  <script type="module">
+    import  Ball  from "./ball.js";
+    import  Paddle from './paddle.js';
+    import  Score from './score.js';
+    Window.prototype.Ball   = Ball
+    Window.prototype.Paddle = Paddle
+    Window.prototype.Score  = Score
+  </script>
+   <script  src="game.js"defer> </script>
+</head>
+<body>
+  <main>
+    <h1>Score</h1>
+    <div class="filed">
+    </div>
+    <canvas id="myCanvas" width="480" height="320"></canvas>
+  </main>
+ </body>
+</html>
